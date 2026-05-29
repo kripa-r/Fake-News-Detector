@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearHistoryBtn = document.getElementById('clear-history');
 
     // API endpoint
-    const API_URL = 'http://127.0.0.1:8000/api/analyze';
+    const API_URL = 'https://fake-news-detector-h7qm.onrender.com/api/analyze';
 
     // Load history from localStorage on page load
     loadHistory();
