@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyNow | Fake News Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VerifyNow 🛡️</h1>
+            <p>Your shield against misinformation. Paste a news article URL to check its authenticity.</p>
+        </header>
+
+        <main>
+            <form id="analyze-form">
+                <input type="url" id="url-input" placeholder="https://example.com/news-article" required>
+                <button type="submit">Analyze</button>
+            </form>
+
+            <div id="results-container" class="hidden">
+                <h2>Analysis Result</h2>
+                <div id="result-card">
+                    <div id="result-classification"></div>
+                    <p>Confidence Score:</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="confidence-bar"></div>
+                    </div>
+                    <span id="confidence-score"></span>
+                    <p class="url-checked">URL: <a href="#" id="checked-url" target="_blank" rel="noopener noreferrer"></a></p>
+                </div>
+            </div>
+
+            <div id="loader" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing... This may take a moment.</p>
+            </div>
+             <div id="error-container" class="hidden">
+                <p>❌ Could not analyze the URL. The site may be unreachable or not a standard news article.</p>
+            </div>
+        </main>
+        
+        <section id="history-section">
+            <h2>Analysis History</h2>
+            <div id="history-list">
+                <p>Your recent analyses will appear here.</p>
+            </div>
+            <button id="clear-history" class="hidden">Clear History</button>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
